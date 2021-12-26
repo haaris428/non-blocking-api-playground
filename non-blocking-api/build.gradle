@@ -1,0 +1,7 @@
+group 'dev.haaris'
+version '1.0-SNAPSHOT'
+
+
+test {
+    useJUnitPlatform()
+}
