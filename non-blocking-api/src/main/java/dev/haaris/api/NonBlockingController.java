@@ -17,7 +17,7 @@ public class NonBlockingController {
     }
     @GetMapping("/non-blocking/resource")
     public Mono<CustomResponse> hello() {
-        return nonBlockingService.get();
+        return Mono.fromFuture(nonBlockingService.get());
     }
     @GetMapping("/non-blocking/resource/mono")
     public Mono<CustomResponse> hello2() {
