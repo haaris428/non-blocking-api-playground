@@ -15,8 +15,8 @@ import java.util.concurrent.Future;
 public class NonBlockingService {
     private static final Logger logger = LogManager.getLogger(NonBlockingService.class);
     private static final ExecutorService executorService = Executors.newFixedThreadPool(100);
-    public Mono<CustomResponse> get(){
-        return Mono.fromFuture(CompletableFuture.supplyAsync(() -> {
+    public CompletableFuture<CustomResponse> get(){
+        return CompletableFuture.supplyAsync(() -> {
             try {
                 logger.info("Starting get resource");
                 logger.info("Sleeping for 5 seconds");
@@ -28,6 +28,6 @@ public class NonBlockingService {
             }
             logger.info("Done");
             return new CustomResponse("Done");
-        }, executorService));
+        }, executorService);
     }
 }

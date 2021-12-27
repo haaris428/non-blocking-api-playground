@@ -58,7 +58,8 @@ public class NonBlockingAPITests {
     public Object[][] dataProvider(){
         return new String[][]{
                 {"http://localhost:8082/non-blocking/resource"},
-                {"http://localhost:8082/non-blocking/resource/mono"}
+                {"http://localhost:8082/non-blocking/resource/mono"},
+                {"http://localhost:8081/blocking/resource"}
         };
     }
 
