@@ -1,0 +1,11 @@
+plugins{
+    id "org.springframework.boot" version "2.6.2"
+}
+
+group 'dev.haaris'
+version '1.0-SNAPSHOT'
+
+
+test {
+    useJUnitPlatform()
+}

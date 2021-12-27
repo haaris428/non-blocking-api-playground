@@ -1,0 +1,5 @@
+rootProject.name = 'non-blocking-java-playground'
+include 'blocking-api'
+include 'non-blocking-api'
+include 'functional-tests'
+
